@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Router : NSObject
 -(void)registerVC:(Class)vc forKey:(NSString *)key;
 -(void)navigateTo: (NSString*) key;
+-(void)setRootTo: (NSString*) key;
 +(id) instance;
 @end
 

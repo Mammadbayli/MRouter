@@ -27,8 +27,6 @@
 }
 
 - (void)navigateTo:(NSString *)key {
-    NSLog(@"Navigating");
-    NSLog(@"%@", registrations[key]);
     Class vc = [registrations objectForKey:key];
     
     if (vc) {
@@ -42,6 +40,23 @@
             }
         });
        
+    }
+}
+
+- (void)setRootTo:(NSString *)key {
+    Class vc = [registrations objectForKey:key];
+    
+    if (vc) {
+        
+        dispatch_queue_t queue = dispatch_get_main_queue();
+        dispatch_async(queue, ^ {
+            UINavigationController * _Nullable nav  = [[[UIApplication sharedApplication] keyWindow] rootViewController];
+            
+            if (nav) {
+                [nav setViewControllers:@[[[vc alloc] init]] animated:YES];
+            }
+        });
+        
     }
 }
 
