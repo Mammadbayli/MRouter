@@ -6,7 +6,23 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		2722EDDE230A87C500ADA9DD /* MRouter-Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2722EDDF230A87C500ADA9DD /* Build configuration list for PBXAggregateTarget "MRouter-Universal" */;
+			buildPhases = (
+				2722EDE2230A87D100ADA9DD /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "MRouter-Universal";
+			productName = "MRouter-Universal";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		2708AD7022EAE96F0000BA99 /* MRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D8964A22CDDD5E005B5C3B /* MRouter.framework */; };
+		2708AD7122EAE96F0000BA99 /* MRouter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27D8964A22CDDD5E005B5C3B /* MRouter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		27D8964F22CDDD5E005B5C3B /* MRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 27D8964D22CDDD5E005B5C3B /* MRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27D8965722CDDD7C005B5C3B /* Router.h in Headers */ = {isa = PBXBuildFile; fileRef = 27D8965522CDDD7C005B5C3B /* Router.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27D8965822CDDD7C005B5C3B /* Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D8965622CDDD7C005B5C3B /* Router.m */; };
@@ -16,9 +32,31 @@
 		27D8966922CDE90B005B5C3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D8966822CDE90B005B5C3B /* Assets.xcassets */; };
 		27D8966F22CDE90B005B5C3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D8966E22CDE90B005B5C3B /* main.m */; };
 		27D8967522CDE98D005B5C3B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D8967422CDE98D005B5C3B /* SecondViewController.m */; };
-		27D8967722CDE9CC005B5C3B /* MRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D8964A22CDDD5E005B5C3B /* MRouter.framework */; };
-		27D8967822CDEB2A005B5C3B /* MRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27D8964A22CDDD5E005B5C3B /* MRouter.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2708AD7222EAE96F0000BA99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27D8964122CDDD5E005B5C3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27D8964922CDDD5E005B5C3B;
+			remoteInfo = MRouter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2708AD7422EAE96F0000BA99 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2708AD7122EAE96F0000BA99 /* MRouter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		27D8964A22CDDD5E005B5C3B /* MRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27D8967822CDEB2A005B5C3B /* MRouter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27D8967722CDE9CC005B5C3B /* MRouter.framework in Frameworks */,
+				2708AD7022EAE96F0000BA99 /* MRouter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,10 +190,12 @@
 				27D8965922CDE903005B5C3B /* Sources */,
 				27D8965A22CDE903005B5C3B /* Frameworks */,
 				27D8965B22CDE903005B5C3B /* Resources */,
+				2708AD7422EAE96F0000BA99 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2708AD7322EAE96F0000BA99 /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
@@ -172,6 +211,9 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = mammadbayli;
 				TargetAttributes = {
+					2722EDDE230A87C500ADA9DD = {
+						CreatedOnToolsVersion = 10.3;
+					};
 					27D8964922CDDD5E005B5C3B = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -195,6 +237,7 @@
 			targets = (
 				27D8964922CDDD5E005B5C3B /* MRouter */,
 				27D8965C22CDE903005B5C3B /* Demo */,
+				2722EDDE230A87C500ADA9DD /* MRouter-Universal */,
 			);
 		};
 /* End PBXProject section */
@@ -218,6 +261,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2722EDE2230A87D100ADA9DD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n# Step 1. Build Device and Simulator versions\nxcodebuild -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\nxcodebuild -target \"${PROJECT_NAME}\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\nfi\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${PROJECT_DIR}\"\n# Step 6. Convenience step to open the project's directory in Finder\nopen \"${PROJECT_DIR}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		27D8964622CDDD5E005B5C3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -240,6 +303,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2708AD7322EAE96F0000BA99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27D8964922CDDD5E005B5C3B /* MRouter */;
+			targetProxy = 2708AD7222EAE96F0000BA99 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		27D8966522CDE903005B5C3B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -252,10 +323,27 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2722EDE0230A87C500ADA9DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2722EDE1230A87C500ADA9DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		27D8965022CDDD5E005B5C3B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BITCODE_GENERATION_MODE = marker;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -307,8 +395,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fembed-bitcode-marker";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -318,6 +408,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BITCODE_GENERATION_MODE = bitcode;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -363,7 +454,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_CFLAGS = "-fembed-bitcode";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -451,6 +544,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2722EDDF230A87C500ADA9DD /* Build configuration list for PBXAggregateTarget "MRouter-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2722EDE0230A87C500ADA9DD /* Debug */,
+				2722EDE1230A87C500ADA9DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		27D8964422CDDD5E005B5C3B /* Build configuration list for PBXProject "MRouter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
